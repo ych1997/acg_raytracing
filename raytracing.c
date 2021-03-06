@@ -6,6 +6,9 @@
 #include "raytracing.h"
 #include "idx_stack.h"
 
+#define STB_IMAGE_WRITE_IMPLEMENTATION
+#include "stb_image_write.h"
+
 #define MAX_REFLECTION_BOUNCES	3
 #define MAX_DISTANCE 1000000000000.0
 #define MIN_DISTANCE 0.00001
@@ -495,4 +498,5 @@ void raytracing(uint8_t *pixels, color background_color,
             }
         }
     }
+    stbi_write_bmp("ray.bmp", width, height, 3, pixels);
 }
