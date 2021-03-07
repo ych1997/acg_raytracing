@@ -7,18 +7,16 @@ light light1 = {
 
 static const
 light light2 = {
-    .light_color = { 0.8,  0.8, 0.8 },
-    .position = { 10, 10, 20 },
+    .light_color = { 0.9,  0.9, 0.9 },
+    .position = { 10, 10, 19 },
     .intensity = 200.0,
 };
-
 static const
 light light3 = {
-    .light_color = { 1,  1, 1 },
-    .position = { 20, 5, 15 },
-    .intensity = 200.0,
+    .light_color = { 0.6,  0.6, 0.6 },
+    .position = { 20, 20, 10 },
+    .intensity = 100.0,
 };
-
 static const
 sphere sphere1 = {
     .center = { 5, 0, 5 },
@@ -118,7 +116,7 @@ rectangular rectangular2 = {
     },
     .normal = { 0.0, 0.0, 1.0 },
     .rectangular_fill = {
-        .fill_color = { 0.5, 0.5, 0.1 },
+        .fill_color = { 0.8, 0.8, 0.0 },
         .Kd = 0.8, .Ks = 0.0, .T = 0.0, .R = 0.5,
         .index_of_refraction = 0.0, .phong_power = 5.0,
     },
@@ -136,6 +134,51 @@ rectangular rectangular3 = {
     .rectangular_fill = {
         .fill_color = { 0.1, 0.1, 0.6 },
         .Kd = 0.8, .Ks = 0.0, .T = 0.0, .R = 0.5,
+        .index_of_refraction = 0.0, .phong_power = 5.0,
+    },
+};
+
+rectangular rectangular4 = {
+    .vertices = {
+        { 0.0,  0.0,  20.0 },    /* v0 */
+        { 20.0, 0.0,  20.0 },    /* v1 */
+        { 0.0, 20.0, 20.0 },    /* v3 */
+        { 20.0,  20.0, 20.0 },    /* v2 */
+    },
+    .normal = { 1.0, 0.0, 0.0 },
+    .rectangular_fill = {
+        .fill_color = { 0.9, 0.9, 0.9 },
+        .Kd = 0.8, .Ks = 0.0, .T = 0.0, .R = 0.5,
+        .index_of_refraction = 0, .phong_power = 5.0,
+    },
+};
+
+rectangular rectangular5 = {
+    .vertices = {
+        { 0.0,  20.0,  20.0 },    /* v0 */
+        { 0.0, 20.0,  0.0 },    /* v1 */
+        { 20.0, 20.0, 20.0 },    /* v3 */
+        { 20.0,  20.0, 20.0 },    /* v2 */
+    },
+    .normal = { 1.0, 0.0, 0.0 },
+    .rectangular_fill = {
+        .fill_color = { 0.8, 0.8, 0.0 },
+        .Kd = 0.8, .Ks = 0.0, .T = 1.0, .R = 0.5,
+        .index_of_refraction = 0.0, .phong_power = 5.0,
+    },
+};
+
+rectangular rectangular6 = {
+    .vertices = {
+        { 20.0,  0.0,  0.0 },    /* v0 */
+        { 20.0, 0.0,  20.0 },    /* v1 */
+        { 20.0, 20.0, 0.0 },    /* v3 */
+        { 20.0,  20.0, 20.0 },    /* v2 */
+    },
+    .normal = { 1.0, 0.0, 0.0 },
+    .rectangular_fill = {
+        .fill_color = { 0.8, 0.8, 0.0 },
+        .Kd = 0.8, .Ks = 0.0, .T = 0.8, .R = 0.5,
         .index_of_refraction = 0.0, .phong_power = 5.0,
     },
 };
