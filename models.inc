@@ -1,7 +1,7 @@
 static const
 light light1 = {
     .light_color = { 0.7, 0.5, 0.5 },
-    .position = { 5, 5, 20 },
+    .position = { 15, 0, 10 },
     .intensity = 200.0,
 };
 
@@ -9,6 +9,13 @@ static const
 light light2 = {
     .light_color = { 0.8,  0.8, 0.8 },
     .position = { 10, 10, 20 },
+    .intensity = 200.0,
+};
+
+static const
+light light3 = {
+    .light_color = { 1,  1, 1 },
+    .position = { 20, 5, 15 },
     .intensity = 200.0,
 };
 
@@ -28,7 +35,7 @@ sphere sphere2 = {
     .center = { 20, 15, 15 },
     .radius = 3,
     .sphere_fill = {
-        .fill_color = { 0.8, 0.6, 0.4 },
+        .fill_color = { 0.2, 0.2, 0.2 },
         .Kd = 0.0, .Ks = 1.0, .T = 1.0, .R = 1.0,
         .index_of_refraction = 1.5, .phong_power = 30.0
     }
@@ -39,17 +46,50 @@ sphere sphere3 = {
     .center = { 5, 10, 5 },
     .radius = 3,
     .sphere_fill = {
-        .fill_color = { 0.4, 0.8, 0.6 },
+        .fill_color = { 0.2, 0.6, 0.3 },
         .Kd = 0.8, .Ks = 0.1, .T = 0.0, .R = 0.1,
         .index_of_refraction = 0.0, .phong_power = 30.0
     }
 };
 
 static const
+sphere sphere4 = {
+    .center = { 10, 4, 3 },
+    .radius = 2,
+    .sphere_fill = {
+        .fill_color = { 0.6, 0.1, 0.1 },
+        .Kd = 0.8, .Ks = 0.1, .T = 0.0, .R = 0.1,
+        .index_of_refraction = 0.0, .phong_power = 30.0
+    }
+};
+
+static const
+sphere sphere5 = {
+    .center = { 10, 16, 2 },
+    .radius = 2,
+    .sphere_fill = {
+        .fill_color = { 0.2, 0.3, 0.9 },
+        .Kd = 0.8, .Ks = 0.1, .T = 0.0, .R = 0.1,
+        .index_of_refraction = 0.0, .phong_power = 30.0
+    }
+};
+
+static const
+sphere sphere6 = {
+    .center = { 15, 2, 2 },
+    .radius = 2,
+    .sphere_fill = {
+        .fill_color = { 0.9, 0.5, 0.0 },
+        .Kd = 0.8, .Ks = 0.1, .T = 0.0, .R = 0.1,
+        .index_of_refraction = 1.5, .phong_power = 30.0
+    }
+};
+
+static const
 viewpoint view = {
-    .vrp = { 40.0, 40.0, 40.0 },
+    .vrp = { 40.0, 40.0, 35.0 },
     .vpn = { -1.0, -1.0, -1.0 },
-    .vup = {  0.0,  0.0,  1.0 }
+    .vup = {  0.0,  0.0,  0.5 }
 };
 
 static const
@@ -78,7 +118,7 @@ rectangular rectangular2 = {
     },
     .normal = { 0.0, 0.0, 1.0 },
     .rectangular_fill = {
-        .fill_color = { 0.6, 0.1, 0.1 },
+        .fill_color = { 0.5, 0.5, 0.1 },
         .Kd = 0.8, .Ks = 0.0, .T = 0.0, .R = 0.5,
         .index_of_refraction = 0.0, .phong_power = 5.0,
     },

@@ -461,6 +461,7 @@ void raytracing(uint8_t *pixels, color background_color,
                 light_node lights, const viewpoint *view,
                 int width, int height)
 {
+    
     point3 u, v, w, d;
     color object_color = { 0.0, 0.0, 0.0 };
 
